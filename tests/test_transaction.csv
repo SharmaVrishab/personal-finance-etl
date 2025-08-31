@@ -1,0 +1,5 @@
+Date,Amount,Merchant,Type,Category
+2025-01-01,$100,Amazon,Debit,Shopping
+2025-02-30,abc,,Credit,
+,200,Flipkart,Debit,Electronics
+2025-03-05,(50),Walmart,Debit,Grocery

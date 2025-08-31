@@ -1,19 +1,25 @@
 # Core dependencies
-pandas>=1.3.0
-numpy>=1.21.0
+
+pandas>=2.2.0
+numpy>=1.26.0
 
 # File processing
-PyPDF2>=2.0.0
-openpyxl>=3.0.0
+PyPDF2>=3.0.0
+openpyxl>=3.1.0
 
-# Database
-sqlite3
-
-# Development
-pytest>=6.0.0
-black>=21.0.0
-flake8>=4.0.0
+# Development & Testing
+pytest>=8.0.0
+pytest-cov>=4.0.0           # Test coverage reports
+ruff>=0.6.0
+mypy>=1.8.0                  # Type checking
 
 # Utilities
-python-dateutil>=2.8.0
-pyyaml>=6.0
+python-dateutil>=2.9.0
+pyyaml>=6.0.0
+
+# User Experience
+rich>=13.7.0                 # Beautiful terminal output
+click>=8.1.0                 # Command-line interfaces
+
+# Data Validation
+pydantic>=2.5.0              # Validate data structures
