@@ -4,7 +4,7 @@ import sys
 # Add project root to Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.extractor.csv_extractor import CSVExtractor
+from src.extractors.csv_extractor import CSVExtractor
 
 # Path to your test CSV - use the simpler approach
 TEST_CSV = os.path.join(os.path.dirname(__file__), "test_transaction.csv")

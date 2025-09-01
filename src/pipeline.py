@@ -1,7 +1,8 @@
 # Main orchestration
 
 
-from extractor.csv_extractor import CSVExtractor
+from extractors.csv_extractor import CSVExtractor
+from transformer import TransactionTransformer
 
 
 def run_pipeline():
@@ -11,11 +12,11 @@ def run_pipeline():
     raw_data = extractor.extract_record(
         "/Users/vrishab/Documents/code/python/projects/personal-finance-etl/tests/test_transaction.csv"
     )
-
-    print(raw_data)
-    """
-    ! finished
-    """
+    df = raw_data
+    # step 2 - transformation
+    transformer = TransactionTransformer()
+    df = transformer.transform(df)
+    print(df)
     print("pipeline finished successfully")
 
 
