@@ -11,8 +11,6 @@ class CSVExtractor(BaseExtractor):
 
     def extract(self, file_path):
         # This satisfies the abstract method requirement
-        import pandas as pd
-
         return pd.read_csv(file_path)
 
     def extract_record(self, source_path: str) -> pd.DataFrame:
@@ -109,6 +107,7 @@ class CSVExtractor(BaseExtractor):
             "is_valid",
         ]
         extra_fields = [col for col in df.columns if col not in standard_fields]
+
         if extra_fields:
             df["extra_fields"] = df[extra_fields].apply(
                 lambda row: {k: v for k, v in row.items() if pd.notna(v)}, axis=1
